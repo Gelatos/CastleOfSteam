@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
 	// UI
 	[SerializeField]
 	private UISprite fullScreenFadeSprite;
+	[SerializeField]
+	private MessageBoxController messageController;
 	
 	// booleans
 	private bool fadingScreen;
@@ -165,6 +167,23 @@ public class Player : MonoBehaviour
 			yield return null;
 		}
 		fadingScreen = false;
+	}
+	
+	#endregion
+	
+	#region Message Box Functions
+	
+	public void PlayMessage (string message)
+	{
+		messageController.Show ();
+		StartCoroutine (AnimateMessage (message));
+	}
+	
+	private IEnumerator AnimateMessage (string message)
+	{
+		yield return StartCoroutine (messageController.PlayText (message));
+		yield return new WaitForSeconds (2.0F);
+		messageController.Hide ();
 	}
 	
 	#endregion
