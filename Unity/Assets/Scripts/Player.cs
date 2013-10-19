@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
 			InteractableObject target = interactionHitRay.collider.GetComponent <InteractableObject> ();
 			if (target != null) {
 				// determine 
-				if (Input.GetButtonUp (KeyCode.Space)) {
+				if (Input.GetKeyDown (KeyCode.Space)) {
 					Interact (target);
 				}
 				SetInteraction (target.interactMessage);

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InteractableObject : MonoBehaviour
+public abstract class InteractableObject : MonoBehaviour
 {
 	#region Global Variables
 	
@@ -11,10 +11,7 @@ public class InteractableObject : MonoBehaviour
 	
 	#region Interaction
 	
-	public virtual void Interact ()
-	{
-		
-	}
-	
+	public abstract void Interact ();
+
 	#endregion
 }
