@@ -43,8 +43,13 @@ public class Player : MonoBehaviour
 	private UISprite interactionSprite;
 	[SerializeField]
 	private UILabel interactionLabel;
-	Ray interactionRay;
-	RaycastHit interactionHitRay;
+	private Ray interactionRay;
+	private RaycastHit interactionHitRay;
+	private Vector3 rayCastPosition;
+	
+	// movement
+	[SerializeField]
+	private CharacterMotor characterMotor;
 	
 	#endregion
 	
@@ -59,6 +64,15 @@ public class Player : MonoBehaviour
 	public string PreviousScene {
 		get {
 			return this.previousScene;
+		}
+	}
+
+	public Transform PlayerTransform {
+		get {
+			return this.playerTransform;
+		}
+		set {
+			playerTransform = value;
 		}
 	}
 	
@@ -77,18 +91,23 @@ public class Player : MonoBehaviour
 			return;
 		} 
 		instance = this;
+		
+		// get the raycast position
+		rayCastPosition = new Vector3 (Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2, 0);
+		ResetGame ();
 	}
 	
 	private void Update ()
 	{
-		interactionRay = Camera.main.ScreenPointToRay (new Vector3 (0.5F, 0.5F, 1.0F));
+		interactionRay = Camera.main.ScreenPointToRay (rayCastPosition);
 		
 		// see if the object the user touched is from the touchable object layer
-		if (Physics.Raycast (interactionRay, out interactionHitRay, 1.0F, 1 << 9)) {
+		if (Physics.Raycast (interactionRay, out interactionHitRay, 5.0F, 1 << 9)) {
 			InteractableObject target = interactionHitRay.collider.GetComponent <InteractableObject> ();
 			if (target != null) {
 				// determine 
 				if (Input.GetKeyDown (KeyCode.F)) {
+					Debug.Log ("interacting");
 					Interact (target);
 				}
 				SetInteraction (target.interactMessage);
@@ -148,7 +167,7 @@ public class Player : MonoBehaviour
 		PlayerPrefs.DeleteAll ();
 	}
 	
-	private bool CheckKey (string keyName)
+	public bool CheckKey (string keyName)
 	{
 		if (PlayerPrefs.GetInt (keyName, 0) != 0) {
 			return true;
@@ -156,7 +175,7 @@ public class Player : MonoBehaviour
 		return false;
 	}
 	
-	private void SaveKey (string keyName)
+	public void SaveKey (string keyName)
 	{
 		PlayerPrefs.SetInt (keyName, 1);
 		PlayerPrefs.Save ();
@@ -265,6 +284,15 @@ public class Player : MonoBehaviour
 	private void Interact (InteractableObject target)
 	{
 		target.Interact ();
+	}
+	
+	#endregion
+	
+	#region Movement Functions
+	
+	public void EnableMovement (bool enable)
+	{
+		characterMotor.canControl = enable;
 	}
 	
 	#endregion

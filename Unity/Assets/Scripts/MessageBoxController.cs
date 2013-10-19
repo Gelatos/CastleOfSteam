@@ -203,7 +203,7 @@ public class MessageBoxController : MonoBehaviour
 	public virtual IEnumerator AnimateShow ()
 	{
 		// fade in the textbox while moving on screen
-		TweenAlpha.Begin (spriteBackground.gameObject, 0.0F, 1.0F);
+		TweenAlpha.Begin (spriteBackground.gameObject, 0.0F, 0.5F);
 		TweenAlpha.Begin (textLabel.gameObject, 0.35F, 1.0F);
 		yield return new WaitForSeconds (0.35F);
 		
