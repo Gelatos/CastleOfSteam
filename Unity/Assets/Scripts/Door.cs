@@ -16,8 +16,13 @@ public class Door : MonoBehaviour
 	
 	private void OnTriggerEnter (Collider other)
 	{
+		Debug.Log ("trigger entered");
 		if (other.tag == "Player") {
+			if (keyName != "") {
 			Player.Instance.LoadLevel (roomName, keyName);
+			} else {
+			Player.Instance.LoadLevel (roomName);
+			}
 		}
 	}
 	

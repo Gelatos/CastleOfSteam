@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
 	
 	// booleans
 	private bool fadingScreen;
+	private bool playingMessage;
 	
 	// interaction
 	[SerializeField]
@@ -94,6 +95,9 @@ public class Player : MonoBehaviour
 		
 		// get the raycast position
 		rayCastPosition = new Vector3 (Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2, 0);
+		
+		// starting the game
+		currentScene = "Courtyard";
 		ResetGame ();
 	}
 	
@@ -191,7 +195,6 @@ public class Player : MonoBehaviour
 		while (fadingScreen) {
 			yield return null;
 		}
-		fadingScreen = true;
 		
 		// set the color
 		fullScreenFadeSprite.color = color;
@@ -222,7 +225,6 @@ public class Player : MonoBehaviour
 		while (fadingScreen) {
 			yield return null;
 		}
-		fadingScreen = true;
 		
 		// set the color
 		fullScreenFadeSprite.color = color;
@@ -253,6 +255,10 @@ public class Player : MonoBehaviour
 	
 	public void PlayMessage (string message)
 	{
+		if (playingMessage) {
+			return;
+		}
+		playingMessage = true;
 		messageController.Show ();
 		StartCoroutine (AnimateMessage (message));
 	}
@@ -261,7 +267,8 @@ public class Player : MonoBehaviour
 	{
 		yield return StartCoroutine (messageController.PlayText (message));
 		yield return new WaitForSeconds (2.0F);
-		messageController.Hide ();
+		yield return StartCoroutine (messageController.AnimateHide ());
+		playingMessage = false;
 	}
 	
 	#endregion
