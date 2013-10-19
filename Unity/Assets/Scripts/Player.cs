@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
 		
 		// set up the instance
 		if (instance != null) {
-			Destroy (this);
+			Destroy (gameObject);
 			return;
 		} 
 		instance = this;
@@ -129,7 +129,6 @@ public class Player : MonoBehaviour
 		} else {
 			playerTransform.position = Room.Instance.DefaultPosition.position;
 		}
-		StartCoroutine (FadeInScreen (Color.black, 1.0F));
 	}
 	
 	#endregion
@@ -149,7 +148,7 @@ public class Player : MonoBehaviour
 		currentScene = sceneName;
 		
 		// load the new level
-		StartCoroutine (FadeOutScreen (Color.white, 1.0F));
+		StartCoroutine (FadeOutScreen (Color.black, 1.0F));
 		Application.LoadLevel (currentScene);
 	}
 	
