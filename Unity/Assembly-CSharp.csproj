@@ -162,6 +162,14 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITiledSprite.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\Scripts\BoilingWaterController.cs" />
+     <Compile Include="Assets\Scripts\CrateController.cs" />
+     <Compile Include="Assets\Scripts\GameOverController.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\ResetGameController.cs" />
+     <Compile Include="Assets\Scripts\RoomController.cs" />
+     <Compile Include="Assets\Scripts\SteamController.cs" />
+     <Compile Include="Assets\Scripts\ValveController.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
