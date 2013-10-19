@@ -1,15 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Door : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+public class Door : MonoBehaviour
+{
+	#region Global Variables
 	
+	[SerializeField]
+	private string roomName;
+	[SerializeField]
+	private string keyName;
+	
+	#endregion
+	
+	#region Unity Functions
+	
+	private void OnTriggerEnter (Collider other)
+	{
+		if (other.tag == "Player") {
+			Player.Instance.LoadLevel (roomName, keyName);
+		}
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	#endregion
 }

@@ -103,6 +103,38 @@ public class Player : MonoBehaviour
 		Application.LoadLevel (currentScene);
 	}
 	
+	public void LoadLevel (string sceneName, string keyName)
+	{
+		if (CheckKey (keyName)) {
+			LoadLevel (sceneName);
+		} else {
+			PlayMessage ("You do not have a key for this room");
+		}
+	}
+	
+	#endregion
+	
+	#region Game Save Handling Functions
+	
+	private void ResetGame ()
+	{
+		PlayerPrefs.DeleteAll ();
+	}
+	
+	private bool CheckKey (string keyName)
+	{
+		if (PlayerPrefs.GetInt (keyName, 0) != 0) {
+			return true;
+		}
+		return false;
+	}
+	
+	private void SaveKey (string keyName)
+	{
+		PlayerPrefs.SetInt (keyName, 1);
+		PlayerPrefs.Save ();
+	}
+	
 	#endregion
 	
 	#region Fade Screen Animations
