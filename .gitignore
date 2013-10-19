@@ -13,6 +13,7 @@ Icon
 .Trashes
 
 # Unity
+Unity/*.pidb
 Unity/Temp/*
 Unity/Library/*
 Unity/Assets/StreamedSceneBundles/*
