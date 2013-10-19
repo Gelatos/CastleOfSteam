@@ -38,6 +38,14 @@ public class Player : MonoBehaviour
 	// booleans
 	private bool fadingScreen;
 	
+	// interaction
+	[SerializeField]
+	private UISprite interactionSprite;
+	[SerializeField]
+	private UILabel interactionLabel;
+	Ray interactionRay;
+	RaycastHit interactionHitRay;
+	
 	#endregion
 	
 	#region Getters and Setters
@@ -69,6 +77,25 @@ public class Player : MonoBehaviour
 			return;
 		} 
 		instance = this;
+	}
+	
+	private void Update ()
+	{
+		interactionRay = Camera.main.ScreenPointToRay (new Vector3 (0.5F, 0.5F, 1.0F));
+		
+		// see if the object the user touched is from the touchable object layer
+		if (Physics.Raycast (interactionRay, out interactionHitRay, 1.0F, 1 << 9)) {
+			InteractableObject target = interactionHitRay.collider.GetComponent <InteractableObject> ();
+			if (target != null) {
+				// determine 
+				if (Input.GetButtonUp (KeyCode.Space)) {
+					Interact (target);
+				}
+				SetInteraction (target.interactMessage);
+				return;
+			} 
+		}
+		RemoveInteraction ();
 	}
 	
 	private void OnLevelWasLoaded (int level)
@@ -216,6 +243,29 @@ public class Player : MonoBehaviour
 		yield return StartCoroutine (messageController.PlayText (message));
 		yield return new WaitForSeconds (2.0F);
 		messageController.Hide ();
+	}
+	
+	#endregion
+	
+	#region Interaction Functions
+	
+	private void SetInteraction (string message)
+	{
+		interactionSprite.color = new Color (186F / 255F, 134F / 255F, 77F / 255F, 1.0F);
+		interactionLabel.text = message;
+
+	}
+	
+	private void RemoveInteraction ()
+	{
+		interactionSprite.color = Color.white;
+		interactionLabel.text = "";
+
+	}
+	
+	private void Interact (InteractableObject target)
+	{
+		target.Interact ();
 	}
 	
 	#endregion
