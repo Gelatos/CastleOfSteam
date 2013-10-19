@@ -166,6 +166,7 @@
      <Compile Include="Assets\Scripts\Crate.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
+     <Compile Include="Assets\Scripts\MessageBoxController.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\ResetButton.cs" />
      <Compile Include="Assets\Scripts\Room.cs" />
