@@ -11,7 +11,8 @@ public class Crate : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision) {
 		
-		if (!CanBePushedBy(collision.gameObject)) {
+		if (!canBePushedByPlayer ||
+				collision.gameObject.tag != "Player") {
 			return;
 		}
 		
@@ -23,30 +24,44 @@ public class Crate : MonoBehaviour {
 		float deltaX;
 		float deltaZ;
 		if (Mathf.Abs(relativeVelocityX) > Mathf.Abs(relativeVelocityZ)) {
+			deltaX = (relativeVelocityX > 0 ? moveDistance : -moveDistance);
 			deltaZ = 0f;
-			if (relativeVelocityX > 0) {
-				// Move right.
-				deltaX = moveDistance;
-			} else {
-				// Move left.
-				deltaX = -moveDistance;
-			}
 		} else {
 			deltaX = 0f;
-			if (relativeVelocityZ > 0) {
-				// Move farther.
-				deltaZ = moveDistance;
-			} else {
-				// Move nearer.
-				deltaZ = -moveDistance;
-			}
+			deltaZ = (relativeVelocityZ > 0 ? moveDistance : -moveDistance);
+		}
+		StartCoroutine(Move(new Vector3(deltaX, 0f, deltaZ)));
+	}
+	
+	void OnParticleCollisionEnter(GameObject otherGameObject) {
+		
+		if (!canBePushedBySteam || otherGameObject.tag != "Steam") {
+			return;
+		}
+		
+		Steam steam = otherGameObject.GetComponent<Steam>();
+		if (steam == null) {
+			return;
+		}
+		
+		float deltaX;
+		float deltaZ;
+		if (steam.IsHorizontal) {
+			bool isRight = (transform.position.x -
+					otherGameObject.transform.position.x > 0);
+			deltaX = (isRight ? moveDistance : -moveDistance);
+			deltaZ = 0f;
+		} else {
+			bool isFarther = (transform.position.z -
+					otherGameObject.transform.position.z > 0);
+			deltaX = 0f;
+			deltaZ = (isFarther ? moveDistance : -moveDistance);
 		}
 		StartCoroutine(Move(new Vector3(deltaX, 0f, deltaZ)));
 	}
 	
 	void OnCollisionExit(Collision collision) {
-		if (IsFloor(collision.gameObject)) {
-			// Fall.
+		if (collision.gameObject.tag == "Floor") {
 			StartCoroutine(Move(new Vector3(0f, -moveDistance, 0f)));
 		}
 	}
@@ -55,10 +70,6 @@ public class Crate : MonoBehaviour {
 		string otherTag = otherGameObject.tag;
 		return (otherTag == "Player" && canBePushedByPlayer) ||
 				(otherTag == "Steam" && canBePushedBySteam);
-	}
-	
-	bool IsFloor(GameObject otherGameObject) {
-		return otherGameObject.tag == "Floor";
 	}
 	
 	IEnumerator Move(Vector3 deltaPosition) {

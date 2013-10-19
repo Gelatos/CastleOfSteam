@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Valve : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+public class Valve : InteractableObject {
 	
-	}
+	[SerializeField] Steam steam;
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public override void Interact() {
+		base.Interact();
+		
+		if (steam != null) {
+			steam.Toggle();
+		}
 	}
 }
