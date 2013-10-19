@@ -11,6 +11,8 @@ public class Crate : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision) {
 		
+		Debug.Log("Crate:OnCollisionEnter");
+		
 		if (!canBePushedByPlayer ||
 				collision.gameObject.tag != "Player") {
 			return;
