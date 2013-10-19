@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
 			InteractableObject target = interactionHitRay.collider.GetComponent <InteractableObject> ();
 			if (target != null) {
 				// determine 
-				if (Input.GetKeyDown (KeyCode.Space)) {
+				if (Input.GetKeyDown (KeyCode.F)) {
 					Interact (target);
 				}
 				SetInteraction (target.interactMessage);
@@ -260,7 +260,6 @@ public class Player : MonoBehaviour
 	{
 		interactionSprite.color = Color.white;
 		interactionLabel.text = "";
-
 	}
 	
 	private void Interact (InteractableObject target)
