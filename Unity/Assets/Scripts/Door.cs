@@ -16,7 +16,7 @@ public class Door : MonoBehaviour
 	
 	private void OnTriggerEnter (Collider other)
 	{
-		Debug.Log ("trigger entered");
+		Debug.Log ("Door:OnTriggerEnter");
 		if (other.tag == "Player") {
 			if (keyName != "") {
 			Player.Instance.LoadLevel (roomName, keyName);
