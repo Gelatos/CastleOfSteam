@@ -2,14 +2,29 @@
 using System.Collections;
 
 public class BoilingWater : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
 	
+	[SerializeField] AudioSource boilingToDeathAudioSource;
+	
+	bool isBoilingToDeath = false;
+	
+	void OnCollisionEnter(Collision collision) {
+		if (collision.gameObject.tag == "Player") {
+			if (!isBoilingToDeath) {
+				isBoilingToDeath = true;
+				StartCoroutine(BoilToDeath());
+			}
+		}
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	IEnumerator BoilToDeath() {
+		
+		if (boilingToDeathAudioSource != null) {
+			boilingToDeathAudioSource.Play();
+			while (boilingToDeathAudioSource.isPlaying) {
+				yield return null;
+			}
+		}
+		
+		Player.Instance.ResetLevel();
 	}
 }
