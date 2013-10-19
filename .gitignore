@@ -1,0 +1,31 @@
+# Mac metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Unity
+Unity/Temp/*
+Unity/Library/*
+Unity/Assets/StreamedSceneBundles/*
+Unity/Assets/StreamedSceneBundles.meta
+build/*
+buildfre/*
+*/build/*
+*/buildfre/*
+Archives/*
+
+# MonoDevelop
+*.sln
+*.userprefs
+*.pidb
+*.booproj
+*.csproj
