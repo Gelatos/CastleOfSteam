@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Crate : MonoBehaviour {
 	
-	const float moveDistance = 6.946041f;
+	const float moveDistance = 3.473021f;
 	const float moveDuration = 1f;
 	
 	[SerializeField] bool canBePushedByPlayer = true;
