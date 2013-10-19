@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d392707d2be5848858babdf048725659
+guid: 3054d570216124b1987506652a19476d
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -58,6 +58,7 @@ ModelImporter:
     4300016: pCube9
     4300018: pCube12
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -74,7 +75,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -108,5 +109,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   additionalBone: 1
-  animationType: 2
+  animationType: 1
   userData: 

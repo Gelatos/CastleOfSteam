@@ -17,6 +17,7 @@ public class Key : InteractableObject
 	// animation variables
 	private bool hoveringUp;
 	private float translationTimer;
+	private Vector3 translationModifier;
 	
 	// interaction handling
 	private bool isInteracted = false;
@@ -35,9 +36,21 @@ public class Key : InteractableObject
 	
 	private void Update ()
 	{
-//		if (growing) {
-//			timer += Time.deltaTime;
+//		if (hoveringUp) {
+//			translationTimer += Time.deltaTime;
+//			if (translationTimer > 1.0F) {
+//				hoveringUp = false;
+//			}
+//		} else {
+//			translationTimer -= Time.deltaTime;
+//			if (translationTimer < 0.0F) {
+//				hoveringUp = true;
+//			}
 //		}
+//		translationModifier
+//		keyTransform.position = new Vector3 (keyTransform.position.x, keyTransform.position.y + (translationTimer / 2), keyTransform.position.z);
+//		lightTransform.localScale = new Vector3 (lightTransform.localScale.x + (translationTimer / 4), lightTransform.localScale.y, 
+//			lightTransform.localScale.x + (translationTimer / 4));
 	}
 	
 	#endregion
