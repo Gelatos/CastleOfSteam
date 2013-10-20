@@ -126,7 +126,7 @@ public class Player : MonoBehaviour
 		// starting the game
 		previousScene = "Courtyard";
 		currentScene = "Courtyard";
-//		ResetGame ();
+		ResetGame ();
 	}
 	
 	private void Update ()
