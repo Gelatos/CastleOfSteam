@@ -1,6 +1,6 @@
 //Maya ASCII 2011 scene
 //Name: courtyard.ma
-//Last modified: Sat, Oct 19, 2013 01:05:46 PM
+//Last modified: Sun, Oct 20, 2013 11:10:45 AM
 //Codeset: 1252
 requires maya "2011";
 requires "stereoCamera" "10.0";
@@ -2854,16 +2854,16 @@ createNode mesh -n "ramp1Shape" -p "ramp1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -29.192995143894503 94.605416512516697 -109.9501502361299 ;
-	setAttr ".r" -type "double3" 320.06164727036685 -166.99999999998533 359.99999999999307 ;
+	setAttr ".t" -type "double3" -51.039694355121917 28.984544563249592 52.322129477815942 ;
+	setAttr ".r" -type "double3" 149.06164727035807 166.99999999997817 180.0000000000056 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 165.49208352756176;
+	setAttr ".coi" 66.799686826783415;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -36.482530173998022 10.817928256875255 3.9059584025940399 ;
+	setAttr ".tp" -type "double3" -80.414272399411004 5.2459067227910179 -0.004463614047166331 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -4503,7 +4503,7 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 278 ".pt";
+	setAttr -s 277 ".pt";
 	setAttr ".pt[1]" -type "float3" 0.0024443609 0.011759197 0.0012538955 ;
 	setAttr ".pt[4:5]" -type "float3" 0.0023156707 0.042820442 0.002174841  
 		-0.0013881607 0.0046692351 -0.00023051711 ;
@@ -4521,8 +4521,8 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 		0.0034222598  0 0.011147589 0  -0.00061996526 0.0074096634 -0.00038816436  -0.00010465168 
 		0.0016146541 -2.0160543e-005  -1.7026316e-005 0.0024150477 -1.702631e-005  0.0034333298 
 		0.021765802 -0.00039622438 ;
-	setAttr ".pt[35:36]" -type "float3" 0.00059770583 0.010220852 0.0004487487  
-		0.00090554985 0.0093160812 -0.00025920651 ;
+	setAttr ".pt[35:36]" -type "float3" 0.00059770583 0 0.0004487487  0.00090554985 
+		0.0093160812 -0.00025920651 ;
 	setAttr ".pt[38:95]" -type "float3" -0.00066950556 0.015511859 -0.0031247085  
 		0.0018087513 0.017056484 -0.0024432701  0.00052887457 0.015354199 -0.0020753122  
 		7.6647048e-005 0.017223578 -9.5121177e-006  0.0033032501 0.055034991 0.0063190232  
@@ -4552,9 +4552,8 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 		-0.00067608862  -0.00045633933 0.0085360399 -0.00033622063 ;
 	setAttr ".pt[97:98]" -type "float3" 0.0037285434 0.02016837 0.00099721283  
 		0.0017114748 0.016835093 -0.00094477175 ;
-	setAttr ".pt[101:104]" -type "float3" 7.9142992e-005 0.003001391 -3.5227156e-005  
-		0.0021299105 0.013758532 0.0011374974  0.00238657 0.016954068 -0.00021805323  0 0.0001958244 
-		0 ;
+	setAttr ".pt[101:104]" -type "float3" 7.9142992e-005 0 -3.5227156e-005  0.0021299105 
+		0.013758532 0.0011374974  0.00238657 0.016954068 -0.00021805323  0 0.0001958244 0 ;
 	setAttr ".pt[107:288]" -type "float3" -3.9611718e-005 0.0039983885 -0.00053408917  
 		-2.4633944e-005 0.015383631 -0.0047990233  0.0028907924 0.020587284 -0.0049172589  
 		-0.00027039531 0.016532522 -0.0018556952  -0.00012793779 0.020512661 -0.0026915043  

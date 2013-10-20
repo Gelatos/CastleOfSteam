@@ -10,6 +10,75 @@ ModelImporter:
     100008: //RootNode
     100010: room3_floor
     100012: wall_room3
+    100014: Bolt1
+    100016: Bolt10
+    100018: Bolt11
+    100020: Bolt12
+    100022: Bolt13
+    100024: Bolt2
+    100026: Bolt3
+    100028: Bolt4
+    100030: Bolt5
+    100032: Bolt6
+    100034: Bolt7
+    100036: Bolt8
+    100038: Bolt9
+    100040: group1
+    100042: group2
+    100044: group3
+    100046: group4
+    100048: group5
+    100050: L_joint:pCylinder1
+    100052: mainPipe
+    100054: Nozzle:pCylinder1
+    100056: Nozzle:pCylinder3
+    100058: Nozzle:pCylinder5
+    100060: Nozzle:pCylinder6
+    100062: Nozzle:pCylinder7
+    100064: pCylinder1
+    100066: pCylinder1 1
+    100068: pCylinder10
+    100070: pCylinder11
+    100072: pCylinder12
+    100074: pCylinder12 1
+    100076: pCylinder12 2
+    100078: pCylinder13
+    100080: pCylinder13 1
+    100082: pCylinder13 2
+    100084: pCylinder14
+    100086: pCylinder14 1
+    100088: pCylinder14 2
+    100090: pCylinder15
+    100092: pCylinder15 1
+    100094: pCylinder16
+    100096: pCylinder16 1
+    100098: pCylinder2
+    100100: pCylinder3
+    100102: pCylinder3 1
+    100104: pCylinder4
+    100106: pCylinder5
+    100108: pCylinder5 1
+    100110: pCylinder6
+    100112: pCylinder7
+    100114: pCylinder7 1
+    100116: pCylinder8
+    100118: pCylinder9
+    100120: vavlebase:Bolt1
+    100122: vavlebase:Bolt10
+    100124: vavlebase:Bolt11
+    100126: vavlebase:Bolt12
+    100128: vavlebase:Bolt13
+    100130: vavlebase:Bolt2
+    100132: vavlebase:Bolt3
+    100134: vavlebase:Bolt4
+    100136: vavlebase:Bolt5
+    100138: vavlebase:Bolt6
+    100140: vavlebase:Bolt7
+    100142: vavlebase:Bolt8
+    100144: vavlebase:Bolt9
+    100146: vavlebase:MainINpipe
+    100148: vavlebase:mainPipe
+    100150: vavlebase:vavle
     400000: blocks
     400002: keylocation3
     400004: pCube4
@@ -17,21 +86,276 @@ ModelImporter:
     400008: //RootNode
     400010: room3_floor
     400012: wall_room3
+    400014: Bolt1
+    400016: Bolt10
+    400018: Bolt11
+    400020: Bolt12
+    400022: Bolt13
+    400024: Bolt2
+    400026: Bolt3
+    400028: Bolt4
+    400030: Bolt5
+    400032: Bolt6
+    400034: Bolt7
+    400036: Bolt8
+    400038: Bolt9
+    400040: group1
+    400042: group2
+    400044: group3
+    400046: group4
+    400048: group5
+    400050: L_joint:pCylinder1
+    400052: mainPipe
+    400054: Nozzle:pCylinder1
+    400056: Nozzle:pCylinder3
+    400058: Nozzle:pCylinder5
+    400060: Nozzle:pCylinder6
+    400062: Nozzle:pCylinder7
+    400064: pCylinder1
+    400066: pCylinder1 1
+    400068: pCylinder10
+    400070: pCylinder11
+    400072: pCylinder12
+    400074: pCylinder12 1
+    400076: pCylinder12 2
+    400078: pCylinder13
+    400080: pCylinder13 1
+    400082: pCylinder13 2
+    400084: pCylinder14
+    400086: pCylinder14 1
+    400088: pCylinder14 2
+    400090: pCylinder15
+    400092: pCylinder15 1
+    400094: pCylinder16
+    400096: pCylinder16 1
+    400098: pCylinder2
+    400100: pCylinder3
+    400102: pCylinder3 1
+    400104: pCylinder4
+    400106: pCylinder5
+    400108: pCylinder5 1
+    400110: pCylinder6
+    400112: pCylinder7
+    400114: pCylinder7 1
+    400116: pCylinder8
+    400118: pCylinder9
+    400120: vavlebase:Bolt1
+    400122: vavlebase:Bolt10
+    400124: vavlebase:Bolt11
+    400126: vavlebase:Bolt12
+    400128: vavlebase:Bolt13
+    400130: vavlebase:Bolt2
+    400132: vavlebase:Bolt3
+    400134: vavlebase:Bolt4
+    400136: vavlebase:Bolt5
+    400138: vavlebase:Bolt6
+    400140: vavlebase:Bolt7
+    400142: vavlebase:Bolt8
+    400144: vavlebase:Bolt9
+    400146: vavlebase:MainINpipe
+    400148: vavlebase:mainPipe
+    400150: vavlebase:vavle
     2300000: keylocation3
     2300002: pCube4
     2300004: pCube5
     2300006: room3_floor
     2300008: wall_room3
+    2300010: Bolt1
+    2300012: Bolt10
+    2300014: Bolt11
+    2300016: Bolt12
+    2300018: Bolt13
+    2300020: Bolt2
+    2300022: Bolt3
+    2300024: Bolt4
+    2300026: Bolt5
+    2300028: Bolt6
+    2300030: Bolt7
+    2300032: Bolt8
+    2300034: Bolt9
+    2300036: L_joint:pCylinder1
+    2300038: mainPipe
+    2300040: Nozzle:pCylinder1
+    2300042: Nozzle:pCylinder3
+    2300044: Nozzle:pCylinder5
+    2300046: Nozzle:pCylinder6
+    2300048: Nozzle:pCylinder7
+    2300050: pCylinder1
+    2300052: pCylinder1 1
+    2300054: pCylinder10
+    2300056: pCylinder11
+    2300058: pCylinder12
+    2300060: pCylinder12 1
+    2300062: pCylinder12 2
+    2300064: pCylinder13
+    2300066: pCylinder13 1
+    2300068: pCylinder13 2
+    2300070: pCylinder14
+    2300072: pCylinder14 1
+    2300074: pCylinder14 2
+    2300076: pCylinder15
+    2300078: pCylinder15 1
+    2300080: pCylinder16
+    2300082: pCylinder16 1
+    2300084: pCylinder2
+    2300086: pCylinder3
+    2300088: pCylinder3 1
+    2300090: pCylinder4
+    2300092: pCylinder5
+    2300094: pCylinder5 1
+    2300096: pCylinder6
+    2300098: pCylinder7
+    2300100: pCylinder7 1
+    2300102: pCylinder8
+    2300104: pCylinder9
+    2300106: vavlebase:Bolt1
+    2300108: vavlebase:Bolt10
+    2300110: vavlebase:Bolt11
+    2300112: vavlebase:Bolt12
+    2300114: vavlebase:Bolt13
+    2300116: vavlebase:Bolt2
+    2300118: vavlebase:Bolt3
+    2300120: vavlebase:Bolt4
+    2300122: vavlebase:Bolt5
+    2300124: vavlebase:Bolt6
+    2300126: vavlebase:Bolt7
+    2300128: vavlebase:Bolt8
+    2300130: vavlebase:Bolt9
+    2300132: vavlebase:mainPipe
     3300000: keylocation3
     3300002: pCube4
     3300004: pCube5
     3300006: room3_floor
     3300008: wall_room3
+    3300010: Bolt1
+    3300012: Bolt10
+    3300014: Bolt11
+    3300016: Bolt12
+    3300018: Bolt13
+    3300020: Bolt2
+    3300022: Bolt3
+    3300024: Bolt4
+    3300026: Bolt5
+    3300028: Bolt6
+    3300030: Bolt7
+    3300032: Bolt8
+    3300034: Bolt9
+    3300036: L_joint:pCylinder1
+    3300038: mainPipe
+    3300040: Nozzle:pCylinder1
+    3300042: Nozzle:pCylinder3
+    3300044: Nozzle:pCylinder5
+    3300046: Nozzle:pCylinder6
+    3300048: Nozzle:pCylinder7
+    3300050: pCylinder1
+    3300052: pCylinder1 1
+    3300054: pCylinder10
+    3300056: pCylinder11
+    3300058: pCylinder12
+    3300060: pCylinder12 1
+    3300062: pCylinder12 2
+    3300064: pCylinder13
+    3300066: pCylinder13 1
+    3300068: pCylinder13 2
+    3300070: pCylinder14
+    3300072: pCylinder14 1
+    3300074: pCylinder14 2
+    3300076: pCylinder15
+    3300078: pCylinder15 1
+    3300080: pCylinder16
+    3300082: pCylinder16 1
+    3300084: pCylinder2
+    3300086: pCylinder3
+    3300088: pCylinder3 1
+    3300090: pCylinder4
+    3300092: pCylinder5
+    3300094: pCylinder5 1
+    3300096: pCylinder6
+    3300098: pCylinder7
+    3300100: pCylinder7 1
+    3300102: pCylinder8
+    3300104: pCylinder9
+    3300106: vavlebase:Bolt1
+    3300108: vavlebase:Bolt10
+    3300110: vavlebase:Bolt11
+    3300112: vavlebase:Bolt12
+    3300114: vavlebase:Bolt13
+    3300116: vavlebase:Bolt2
+    3300118: vavlebase:Bolt3
+    3300120: vavlebase:Bolt4
+    3300122: vavlebase:Bolt5
+    3300124: vavlebase:Bolt6
+    3300126: vavlebase:Bolt7
+    3300128: vavlebase:Bolt8
+    3300130: vavlebase:Bolt9
+    3300132: vavlebase:mainPipe
     4300000: room3_floor
     4300002: wall_room3
     4300004: keylocation3
     4300006: pCube4
     4300008: pCube5
+    4300010: vavlebase:mainPipe
+    4300012: vavlebase:Bolt1
+    4300014: vavlebase:Bolt2
+    4300016: vavlebase:Bolt3
+    4300018: vavlebase:Bolt4
+    4300020: vavlebase:Bolt5
+    4300022: vavlebase:Bolt6
+    4300024: vavlebase:Bolt7
+    4300026: vavlebase:Bolt8
+    4300028: vavlebase:Bolt9
+    4300030: vavlebase:Bolt10
+    4300032: vavlebase:Bolt11
+    4300034: vavlebase:Bolt12
+    4300036: vavlebase:Bolt13
+    4300038: mainPipe
+    4300040: Bolt1
+    4300042: Bolt2
+    4300044: Bolt3
+    4300046: Bolt4
+    4300048: Bolt5
+    4300050: Bolt6
+    4300052: Bolt7
+    4300054: Bolt8
+    4300056: Bolt9
+    4300058: Bolt10
+    4300060: Bolt11
+    4300062: Bolt12
+    4300064: Bolt13
+    4300066: pCylinder1
+    4300068: L_joint:pCylinder1
+    4300070: pCylinder2
+    4300072: pCylinder3
+    4300074: pCylinder4
+    4300076: pCylinder5
+    4300078: pCylinder6
+    4300080: Nozzle:pCylinder1
+    4300082: Nozzle:pCylinder3
+    4300084: Nozzle:pCylinder5
+    4300086: Nozzle:pCylinder6
+    4300088: Nozzle:pCylinder7
+    4300090: pCylinder7
+    4300092: pCylinder8
+    4300094: pCylinder9
+    4300096: pCylinder10
+    4300098: pCylinder1
+    4300100: pCylinder3
+    4300102: pCylinder5
+    4300104: pCylinder7
+    4300106: pCylinder11
+    4300108: pCylinder15
+    4300110: pCylinder16
+    4300112: pCylinder14
+    4300114: pCylinder13
+    4300116: pCylinder12
+    4300118: pCylinder15
+    4300120: pCylinder16
+    4300122: pCylinder14
+    4300124: pCylinder13
+    4300126: pCylinder12
+    4300128: pCylinder14
+    4300130: pCylinder13
+    4300132: pCylinder12
     9500000: //RootNode
     11100000: //RootNode
   materials:
