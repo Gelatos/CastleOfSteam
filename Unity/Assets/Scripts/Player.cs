@@ -114,7 +114,7 @@ public class Player : MonoBehaviour
 
 
 		// get the raycast position
-		rayCastPosition = new Vector3 (Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2, 0);
+		rayCastPosition = new Vector3 (0.5F, 0.5F, 0);
 		
 		// starting the game
 		previousScene = "Courtyard";
@@ -124,14 +124,13 @@ public class Player : MonoBehaviour
 	
 	private void Update ()
 	{
-		interactionRay = Camera.main.ScreenPointToRay (rayCastPosition);
+		interactionRay = Camera.main.ViewportPointToRay (rayCastPosition);
+		Debug.DrawRay( interactionRay.origin, interactionRay.direction );
 		
 		
 		// see if the object the user touched is from the touchable object layer
 		if (Physics.Raycast (interactionRay, out interactionHitRay, 5.0F, 1 << 9)) {
 			InteractableObject target = interactionHitRay.collider.GetComponent <InteractableObject> ();
-			Debug.Log ("Pewpew");
-		Debug.DrawRay( interactionRay.origin, interactionRay.direction );
 			if (target != null) {
 				// determine
 				if (Input.GetKeyDown (KeyCode.F)) {
