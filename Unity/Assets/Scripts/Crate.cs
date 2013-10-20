@@ -66,14 +66,6 @@ public class Crate : MonoBehaviour {
 		StartCoroutine(Move(new Vector3(deltaX, 0f, deltaZ)));
 	}
 	
-	/*
-	void OnCollisionExit(Collision collision) {
-		if (collision.gameObject.tag == "Floor") {
-			StartCoroutine(Move(new Vector3(0f, -moveDistance, 0f)));
-		}
-	}
-	*/
-	
 	bool CanBePushedBy(GameObject otherGameObject) {
 		string otherTag = otherGameObject.tag;
 		return (otherTag == "Player" && canBePushedByPlayer) ||
@@ -83,16 +75,22 @@ public class Crate : MonoBehaviour {
 	IEnumerator Move(Vector3 deltaPosition) {
 		Debug.Log("Crate:Move");
 		
+		Rigidbody rigidbody_ = rigidbody;
+		RaycastHit hitInfo;
+		if (!rigidbody_.SweepTest(deltaPosition, out hitInfo)) {
+			yield break;
+		}
+		
 		float time = 0f;
-		Transform _transform = transform;
-		Vector3 from = _transform.position;
+		Transform transform_ = transform;
+		Vector3 from = transform_.position;
 		Vector3 to = from + deltaPosition;
 		while (time <= moveDuration) {
 			time += Time.deltaTime;
 			float t = Mathf.SmoothStep(0f, 1f, time / moveDuration);
-			rigidbody.isKinematic = true;
-			_transform.position = Vector3.Lerp(from, to, t);
-			rigidbody.isKinematic = false;
+			rigidbody_.isKinematic = true;
+			transform_.position = Vector3.Lerp(from, to, t);
+			rigidbody_.isKinematic = false;
 			yield return null;
 		}
 	}
