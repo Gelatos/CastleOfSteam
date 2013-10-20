@@ -59,7 +59,12 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	private UISprite interactionSprite;
 	[SerializeField]
+	private UISprite vrInteractionSprite ;
+
+	[SerializeField]
 	private UILabel interactionLabel;
+	[SerializeField]
+	private UILabel vrInteractionLabel ;
 	private Ray interactionRay;
 	private RaycastHit interactionHitRay;
 	private Vector3 rayCastPosition;
@@ -111,6 +116,8 @@ public class Player : MonoBehaviour
 		_vrController.SetActive( is_VR ) ;
 		_regularController.SetActive( !is_VR ) ;
 		playerTransform = is_VR ? _vrTransform : playerTransform ;
+		interactionLabel = is_VR ? vrInteractionLabel : interactionLabel ;
+		interactionSprite = is_VR ? vrInteractionSprite : interactionSprite ;
 
 
 		// get the raycast position
