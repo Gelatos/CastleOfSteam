@@ -53,6 +53,8 @@ public class Key : InteractableObject
 		}
 		isInteracted = true;
 		
+		base.Interact();
+		
 		StartCoroutine (MoveTowardsPlayer ());
 	}
 	
