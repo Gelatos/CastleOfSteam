@@ -5,7 +5,7 @@ public abstract class InteractableObject : MonoBehaviour {
 	
 	public string interactMessage;
 	
-	[SerializeField] AudioSource interactAudioSource;
+	[SerializeField] protected AudioSource interactAudioSource;
 	
 	public virtual void Interact() {
 		if (interactAudioSource != null) {
