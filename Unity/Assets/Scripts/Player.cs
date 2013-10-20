@@ -85,19 +85,19 @@ public class Player : MonoBehaviour
 	// Use this for initialization
 	private void Awake ()
 	{
-		DontDestroyOnLoad (this);
-		
 		// set up the instance
-		if (instance != null) {
+		if (instance != null && instance != this) {
 			Destroy (gameObject);
 			return;
 		} 
 		instance = this;
+		DontDestroyOnLoad (this);
 		
 		// get the raycast position
 		rayCastPosition = new Vector3 (Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2, 0);
 		
 		// starting the game
+		previousScene = "Courtyard";
 		currentScene = "Courtyard";
 		ResetGame ();
 	}
@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
 		if (Physics.Raycast (interactionRay, out interactionHitRay, 5.0F, 1 << 9)) {
 			InteractableObject target = interactionHitRay.collider.GetComponent <InteractableObject> ();
 			if (target != null) {
-				// determine 
+				// determine
 				if (Input.GetKeyDown (KeyCode.F)) {
 					Debug.Log ("interacting");
 					Interact (target);
@@ -120,11 +120,22 @@ public class Player : MonoBehaviour
 			} 
 		}
 		RemoveInteraction ();
+		
+		if (Input.GetKeyDown (KeyCode.R)) {
+			StartCoroutine (ResetLevel ());
+		}
 	}
 	
 	private void OnLevelWasLoaded (int level)
 	{
+		// set up the instance
+		if (instance != null && instance != this) {
+			Destroy (gameObject);
+			return;
+		} 
+		
 		// place the player at the start location
+		Debug.Log ("prev: " + previousScene);
 		if (Room.Instance.LocationDictionary.ContainsKey (previousScene)) {
 			playerTransform.position = Room.Instance.LocationDictionary [previousScene].position;
 		} else {
@@ -137,10 +148,9 @@ public class Player : MonoBehaviour
 	
 	#region Scene Loading Functions
 	
-	public void ResetLevel ()
+	public IEnumerator ResetLevel ()
 	{
-		StartCoroutine (FadeOutScreen (Color.black, 0.1F));
-		StartCoroutine (WaitForFadeThenLoad (currentScene));
+		yield return StartCoroutine (WaitForFadeThenLoad (currentScene));
 	}
 	
 	public void LoadLevel (string sceneName)
