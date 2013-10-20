@@ -28,15 +28,12 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	private bool is_VR = false ;
 	[SerializeField]
-	private GameObject _regularCamera ;
+	private GameObject _regularController ;
 	[SerializeField]
-	private GameObject _vrCamera ;
+	private GameObject _vrController ;
+	[SerializeField]
+	private Transform _vrTransform ;
 
-
-	[SerializeField]
-	private MouseLook _mLook ;
-	[SerializeField]
-	private GameObject _2DUI ;
 
 	// Transforms
 	[SerializeField]
@@ -106,10 +103,10 @@ public class Player : MonoBehaviour
 		instance = this;
 		DontDestroyOnLoad (this);
 
-		_vrCamera.SetActive( is_VR ) ;
-		_regularCamera.SetActive( !is_VR ) ;
-		_mLook.enabled = !is_VR ;
-		_2DUI.SetActive( !is_VR );
+		_vrController.SetActive( is_VR ) ;
+		_regularController.SetActive( !is_VR ) ;
+		playerTransform = is_VR ? _vrTransform : playerTransform ;
+
 
 		// get the raycast position
 		rayCastPosition = new Vector3 (Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2, 0);
