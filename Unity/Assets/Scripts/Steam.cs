@@ -5,7 +5,7 @@ using System.Collections;
 [RequireComponent (typeof(ParticleSystem))]
 public class Steam : MonoBehaviour {
 	
-	public float toggleColliderDelay = 0.5f;
+	[SerializeField] float toggleColliderDelay = 0.5f;
 	
 	void Awake() {
 		particleSystem.enableEmission = collider.enabled = false;
