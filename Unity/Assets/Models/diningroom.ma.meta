@@ -129,6 +129,22 @@ ModelImporter:
     100246: polySurface8 1
     100248: polySurface9
     100250: polySurface9 1
+    100252: group5
+    100254: Halberd:Halberd
+    100256: Longsword:Claymore
+    100258: Mace:Mace
+    100260: pointLight1
+    100262: PoleAxe1
+    100264: PoleAxe:PoleAxe
+    100266: pPlane1
+    100268: pPlane2
+    100270: pPlane3
+    100272: pPlane4
+    100274: pPlane5
+    100276: pPlane6
+    100278: pPlane7
+    100280: pPlane8
+    100282: Shield_3:Shield2
     400000: dining_floor
     400002: dining_wall
     400004: //RootNode
@@ -255,6 +271,22 @@ ModelImporter:
     400246: polySurface8 1
     400248: polySurface9
     400250: polySurface9 1
+    400252: group5
+    400254: Halberd:Halberd
+    400256: Longsword:Claymore
+    400258: Mace:Mace
+    400260: pointLight1
+    400262: PoleAxe1
+    400264: PoleAxe:PoleAxe
+    400266: pPlane1
+    400268: pPlane2
+    400270: pPlane3
+    400272: pPlane4
+    400274: pPlane5
+    400276: pPlane6
+    400278: pPlane7
+    400280: pPlane8
+    400282: Shield_3:Shield2
     2300000: polySurface105
     2300002: polySurface108
     2300004: polySurface109
@@ -363,6 +395,20 @@ ModelImporter:
     2300210: polySurface8 1
     2300212: polySurface9
     2300214: polySurface9 1
+    2300216: Halberd:Halberd
+    2300218: Longsword:Claymore
+    2300220: Mace:Mace
+    2300222: PoleAxe1
+    2300224: PoleAxe:PoleAxe
+    2300226: pPlane1
+    2300228: pPlane2
+    2300230: pPlane3
+    2300232: pPlane4
+    2300234: pPlane5
+    2300236: pPlane6
+    2300238: pPlane7
+    2300240: pPlane8
+    2300242: Shield_3:Shield2
     3300000: polySurface105
     3300002: polySurface108
     3300004: polySurface109
@@ -471,6 +517,20 @@ ModelImporter:
     3300210: polySurface8 1
     3300212: polySurface9
     3300214: polySurface9 1
+    3300216: Halberd:Halberd
+    3300218: Longsword:Claymore
+    3300220: Mace:Mace
+    3300222: PoleAxe1
+    3300224: PoleAxe:PoleAxe
+    3300226: pPlane1
+    3300228: pPlane2
+    3300230: pPlane3
+    3300232: pPlane4
+    3300234: pPlane5
+    3300236: pPlane6
+    3300238: pPlane7
+    3300240: pPlane8
+    3300242: Shield_3:Shield2
     4300000: polySurface108
     4300002: polySurface109
     4300004: polySurface105
@@ -579,6 +639,20 @@ ModelImporter:
     4300210: polySurface7
     4300212: polySurface8
     4300214: polySurface9
+    4300216: PoleAxe:PoleAxe
+    4300218: PoleAxe1
+    4300220: Mace:Mace
+    4300222: Halberd:Halberd
+    4300224: Shield_3:Shield2
+    4300226: Longsword:Claymore
+    4300228: pPlane1
+    4300230: pPlane2
+    4300232: pPlane3
+    4300234: pPlane4
+    4300236: pPlane5
+    4300238: pPlane6
+    4300240: pPlane7
+    4300242: pPlane8
     9500000: //RootNode
     11100000: //RootNode
   materials:
