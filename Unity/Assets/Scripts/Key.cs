@@ -78,6 +78,11 @@ public class Key : InteractableObject
 		Player.Instance.EnableMovement (true);
 		Player.Instance.SaveKey (keyName);
 		Player.Instance.PlayMessage ("You found a key!");
+		
+		while (interactAudioSource.isPlaying) {
+			yield return null;
+		}
+		
 		Destroy (gameObject);
 	}
 	
