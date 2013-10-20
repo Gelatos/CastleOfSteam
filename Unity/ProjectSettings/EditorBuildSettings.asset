@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Puzzle3.unity
   - enabled: 1
     path: Assets/Scenes/Puzzle4.unity
+  - enabled: 1
+    path: Assets/Scenes/Puzzle5.unity
