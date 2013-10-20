@@ -1,25 +1,59 @@
 fileFormatVersion: 2
-guid: 0a28255bbd112983d000f80b25bb6539
+guid: 28959d5df2d46450094b39520d521e4e
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cube
-    100004: Cylinder
-    400000: //RootNode
-    400002: Cube
-    400004: Cylinder
-    2300000: Cube
-    2300002: Cylinder
-    3300000: Cube
-    3300002: Cylinder
-    4300000: Cube
-    4300002: Cylinder
-    7400000: Default Take
-    11100000: //RootNode
+    100000: innerWheel
+    100002: outerWheel
+    100004: Pull_shaft
+    100006: surpports1
+    100008: surpports2
+    100010: surpports3
+    100012: surpports4
+    100014: surpports5
+    100016: surpports6
+    100018: surpports7
+    100020: //RootNode
+    100022: vavle 1
+    400000: innerWheel
+    400002: outerWheel
+    400004: Pull_shaft
+    400006: surpports1
+    400008: surpports2
+    400010: surpports3
+    400012: surpports4
+    400014: surpports5
+    400016: surpports6
+    400018: surpports7
+    400020: //RootNode
+    400022: vavle 1
+    2300000: innerWheel
+    2300002: outerWheel
+    2300004: Pull_shaft
+    2300006: surpports1
+    2300008: surpports2
+    2300010: surpports3
+    2300012: surpports4
+    2300014: surpports5
+    2300016: surpports6
+    2300018: surpports7
+    3300000: innerWheel
+    3300002: outerWheel
+    3300004: Pull_shaft
+    3300006: surpports1
+    3300008: surpports2
+    3300010: surpports3
+    3300012: surpports4
+    3300014: surpports5
+    3300016: surpports6
+    3300018: surpports7
+    4300014: Pull_shaft
+    4300016: outerWheel
+    4300018: innerWheel
+    9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 3
+    materialName: 0
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
@@ -49,7 +83,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
@@ -67,5 +101,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   additionalBone: 1
-  animationType: 1
+  animationType: 2
   userData: 

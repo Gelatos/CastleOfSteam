@@ -1,25 +1,45 @@
 fileFormatVersion: 2
-guid: 0a28255bbd112983d000f80b25bb6539
+guid: 8deada60bf9064875be18543d3711102
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cube
-    100004: Cylinder
-    400000: //RootNode
-    400002: Cube
-    400004: Cylinder
-    2300000: Cube
-    2300002: Cylinder
-    3300000: Cube
-    3300002: Cylinder
-    4300000: Cube
-    4300002: Cylinder
-    7400000: Default Take
-    11100000: //RootNode
+    100000: Pillar
+    100002: //RootNode
+    100004: pillar
+    100006: pipe
+    100008: pipe1
+    100010: pipe2
+    100012: pipe3
+    100014: polySurface2
+    100016: polySurface8
+    100018: transform10
+    100020: transform5
+    100022: transform6
+    100024: transform7
+    100026: transform8
+    100028: transform9
+    400000: Pillar
+    400002: pillar
+    400004: //RootNode
+    400006: pipe
+    400008: pipe1
+    400010: pipe2
+    400012: pipe3
+    400014: polySurface2
+    400016: polySurface8
+    400018: transform10
+    400020: transform5
+    400022: transform6
+    400024: transform7
+    400026: transform8
+    400028: transform9
+    2300000: pillar
+    3300000: pillar
+    4300000: pillar
+    9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 3
+    materialName: 0
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
@@ -49,7 +69,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
@@ -67,5 +87,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   additionalBone: 1
-  animationType: 1
+  animationType: 2
   userData: 
