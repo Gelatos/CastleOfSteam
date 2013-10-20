@@ -126,9 +126,12 @@ public class Player : MonoBehaviour
 	{
 		interactionRay = Camera.main.ScreenPointToRay (rayCastPosition);
 		
+		
 		// see if the object the user touched is from the touchable object layer
 		if (Physics.Raycast (interactionRay, out interactionHitRay, 5.0F, 1 << 9)) {
 			InteractableObject target = interactionHitRay.collider.GetComponent <InteractableObject> ();
+			Debug.Log ("Pewpew");
+		Debug.DrawRay( interactionRay.origin, interactionRay.direction );
 			if (target != null) {
 				// determine
 				if (Input.GetKeyDown (KeyCode.F)) {
@@ -360,11 +363,14 @@ public class Player : MonoBehaviour
 	
 	private IEnumerator DeathAnimation ()
 	{
+		Player.Instance.EnableMovement (false);
 		yield return StartCoroutine (FadeOutScreen (Color.black, 0.5F));
+		playerTransform.position += Vector3.up * 20000;
 		playingMessage = true;
 		messageController.Show ();
 		yield return StartCoroutine (AnimateMessage ("You Died"));
 		Application.LoadLevel (currentScene);
+		Player.Instance.EnableMovement (true);
 	}
 	
 	#endregion
