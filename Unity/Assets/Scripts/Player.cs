@@ -35,6 +35,12 @@ public class Player : MonoBehaviour
 	[SerializeField]
 	private AudioSource creakingDoorAudioSource;
 
+
+	[SerializeField]
+	private MouseLook _mLook ;
+	[SerializeField]
+	private GameObject _2DUI ;
+
 	// Transforms
 	[SerializeField]
 	private Transform playerTransform;
@@ -105,6 +111,8 @@ public class Player : MonoBehaviour
 
 		_vrCamera.SetActive( is_VR ) ;
 		_regularCamera.SetActive( !is_VR ) ;
+		_mLook.enabled = !is_VR ;
+		_2DUI.SetActive( !is_VR );
 
 		// get the raycast position
 		rayCastPosition = new Vector3 (Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2, 0);

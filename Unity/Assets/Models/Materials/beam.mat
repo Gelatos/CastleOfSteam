@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: beam
-  m_Shader: {fileID: 34, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: bc05bb8c2ed7b4571a37a76fc445c7f8, type: 3}
   m_ShaderKeywords: []
   m_SavedProperties:
     serializedVersion: 2
@@ -31,11 +31,15 @@ Material:
         first:
           name: _Shininess
         second: .699999988
+      data:
+        first:
+          name: _Power
+        second: 3.62686586
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .931732535, g: .985294104, b: .014489633, a: .250980407}
+        second: {r: .79411763, g: .673630774, b: 0, a: .776470602}
       data:
         first:
           name: _SpecColor
