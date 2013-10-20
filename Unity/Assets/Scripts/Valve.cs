@@ -6,7 +6,9 @@ public class Valve : InteractableObject
 	
 	[SerializeField]
 	Steam steam;
-	private bool turning;
+	private bool turning = false;
+	[SerializeField]
+	private Transform valveTransform;
 	
 	public override void Interact ()
 	{
@@ -15,9 +17,7 @@ public class Valve : InteractableObject
 		}
 		base.Interact ();
 		
-		if (steam != null) {
-			steam.Toggle ();
-		}
+		StartCoroutine (TurnValve ());
 	}
 	
 	private IEnumerator TurnValve ()
@@ -26,8 +26,8 @@ public class Valve : InteractableObject
 		
 		float timer = 0.0F;
 		while (timer < 360.0F) {
-			timer += Time.deltaTime * 360;
-			transform.localEulerAngles = Vector3.Lerp (Vector3.zero, Vector3.forward * 360, timer);
+			timer += Time.deltaTime * 360.0F;
+			valveTransform.localEulerAngles = Vector3.up * timer;
 			yield return null;
 		}
 		

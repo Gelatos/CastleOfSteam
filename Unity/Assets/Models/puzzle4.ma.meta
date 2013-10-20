@@ -15,6 +15,17 @@ ModelImporter:
     100018: //RootNode
     100020: room4_floor
     100022: room4_wall
+    100024: L_joint:pCylinder1
+    100026: pCylinder1
+    100028: pCylinder2
+    100030: pCylinder3
+    100032: pCylinder4
+    100034: pCylinder5
+    100036: polySurface5
+    100038: polySurface6
+    100040: polySurface7
+    100042: y_joint:pCylinder2
+    100044: y_joint:polySurface5
     400000: blocks
     400002: keylocation4
     400004: pCube10
@@ -27,6 +38,17 @@ ModelImporter:
     400018: //RootNode
     400020: room4_floor
     400022: room4_wall
+    400024: L_joint:pCylinder1
+    400026: pCylinder1
+    400028: pCylinder2
+    400030: pCylinder3
+    400032: pCylinder4
+    400034: pCylinder5
+    400036: polySurface5
+    400038: polySurface6
+    400040: polySurface7
+    400042: y_joint:pCylinder2
+    400044: y_joint:polySurface5
     2300000: keylocation4
     2300002: pCube10
     2300004: pCube11
@@ -37,6 +59,16 @@ ModelImporter:
     2300014: pCube9
     2300016: room4_floor
     2300018: room4_wall
+    2300020: L_joint:pCylinder1
+    2300022: pCylinder1
+    2300024: pCylinder2
+    2300026: pCylinder3
+    2300028: pCylinder4
+    2300030: pCylinder5
+    2300032: polySurface5
+    2300034: polySurface6
+    2300036: polySurface7
+    2300038: y_joint:polySurface5
     3300000: keylocation4
     3300002: pCube10
     3300004: pCube11
@@ -47,6 +79,16 @@ ModelImporter:
     3300014: pCube9
     3300016: room4_floor
     3300018: room4_wall
+    3300020: L_joint:pCylinder1
+    3300022: pCylinder1
+    3300024: pCylinder2
+    3300026: pCylinder3
+    3300028: pCylinder4
+    3300030: pCylinder5
+    3300032: polySurface5
+    3300034: polySurface6
+    3300036: polySurface7
+    3300038: y_joint:polySurface5
     4300000: room4_wall
     4300002: room4_floor
     4300004: keylocation4
@@ -57,6 +99,16 @@ ModelImporter:
     4300014: pCube11
     4300016: pCube9
     4300018: pCube12
+    4300020: pCylinder1
+    4300022: y_joint:polySurface5
+    4300024: L_joint:pCylinder1
+    4300026: pCylinder2
+    4300028: polySurface5
+    4300030: polySurface6
+    4300032: pCylinder3
+    4300034: pCylinder4
+    4300036: polySurface7
+    4300038: pCylinder5
     9500000: //RootNode
     11100000: //RootNode
   materials:
