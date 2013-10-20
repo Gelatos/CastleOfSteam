@@ -550,7 +550,7 @@ Transform:
   m_PrefabInternal: {fileID: 1504759724}
   m_GameObject: {fileID: 344854856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -223.000153, y: -360, z: 0}
+  m_LocalPosition: {x: -759.000122, y: -360, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1651549396}
@@ -1711,7 +1711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04ca899870b04c5480d130bc7d34b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  is_VR: 1
+  is_VR: 0
   _regularCamera: {fileID: 486091268}
   _vrCamera: {fileID: 2089288544}
   playerTransform: {fileID: 1557962952}
@@ -4097,15 +4097,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400024, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -223.000153
+      value: -759.000122
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.539016724
+      value: 1.04953766
       objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.04958057
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: jumping.enabled
@@ -4141,7 +4141,7 @@ Prefab:
       objectReference: {fileID: 486091268}
     - target: {fileID: 11400000, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: is_VR
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
@@ -4363,7 +4363,7 @@ Transform:
   m_PrefabInternal: {fileID: 1504759724}
   m_GameObject: {fileID: 1570257095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.539016724, y: 0, z: 0}
+  m_LocalPosition: {x: 1.04953766, y: 1.04958057, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 864652349}
