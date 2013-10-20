@@ -24,7 +24,14 @@ public class Player : MonoBehaviour
 	// scene holders
 	private string previousScene;
 	private string currentScene;
-	
+
+	[SerializeField]
+	private bool is_VR = false ;
+	[SerializeField]
+	private GameObject _regularCamera ;
+	[SerializeField]
+	private GameObject _vrCamera ;
+
 	// Transforms
 	[SerializeField]
 	private Transform playerTransform;
@@ -92,7 +99,10 @@ public class Player : MonoBehaviour
 		} 
 		instance = this;
 		DontDestroyOnLoad (this);
-		
+
+		_vrCamera.SetActive( is_VR ) ;
+		_regularCamera.SetActive( !is_VR ) ;
+
 		// get the raycast position
 		rayCastPosition = new Vector3 (Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2, 0);
 		
