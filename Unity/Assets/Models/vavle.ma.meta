@@ -47,6 +47,13 @@ ModelImporter:
     3300014: surpports5
     3300016: surpports6
     3300018: surpports7
+    4300000: surpports7
+    4300002: surpports6
+    4300004: surpports5
+    4300006: surpports4
+    4300008: surpports3
+    4300010: surpports2
+    4300012: surpports1
     4300014: Pull_shaft
     4300016: outerWheel
     4300018: innerWheel

@@ -1348,33 +1348,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
---- !u!1 &566754419
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 566754420}
-  m_Layer: 0
-  m_Name: PlayerController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &566754420
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 566754419}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.41798878, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 834410746}
-  m_Father: {fileID: 0}
 --- !u!1 &574394538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,11 +1864,11 @@ Transform:
   m_PrefabInternal: {fileID: 1504759724}
   m_GameObject: {fileID: 834410745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.41798878, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1557962952}
-  m_Father: {fileID: 566754420}
+  m_Father: {fileID: 0}
 --- !u!114 &834410747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1908,7 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04ca899870b04c5480d130bc7d34b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  is_VR: 1
+  is_VR: 0
   _regularCamera: {fileID: 486091268}
   _vrCamera: {fileID: 2089288544}
   _mLook: {fileID: 1557962955}
@@ -4520,11 +4493,11 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 566754420}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 400000, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.41798878
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4632,7 +4605,7 @@ Prefab:
       objectReference: {fileID: 486091268}
     - target: {fileID: 11400000, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: is_VR
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: m_LocalPosition.z
