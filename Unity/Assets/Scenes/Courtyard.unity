@@ -952,13 +952,13 @@ CharacterController:
   m_PrefabInternal: {fileID: 1148133306}
   m_GameObject: {fileID: 424220466}
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 4
   m_Radius: .5
   m_SlopeLimit: 45
   m_StepOffset: .300000012
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &428483080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,7 +1353,7 @@ Transform:
   m_PrefabInternal: {fileID: 1148133306}
   m_GameObject: {fileID: 489754128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 107.607994, y: -50.008007, z: 0}
+  m_LocalPosition: {x: 107, y: -50, z: 0}
   m_LocalScale: {x: 58, y: 58, z: 1}
   m_Children: []
   m_Father: {fileID: 2043786004}
@@ -3090,11 +3090,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 107.607994
+      value: 107
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -50.008007
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300002, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
+      propertyPath: m_Height
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300002, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
+      propertyPath: m_Height
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
+      propertyPath: m_Center.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
@@ -5062,13 +5078,13 @@ CharacterController:
   m_PrefabInternal: {fileID: 1148133306}
   m_GameObject: {fileID: 1557962951}
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 4
   m_Radius: .400000006
   m_SlopeLimit: 45
   m_StepOffset: .400000006
   m_SkinWidth: .0500000007
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1570257095
 GameObject:
   m_ObjectHideFlags: 0
