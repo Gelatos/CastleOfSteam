@@ -96,6 +96,9 @@ public class Player : MonoBehaviour
 		// get the raycast position
 		rayCastPosition = new Vector3 (Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2, 0);
 		
+		// character motor setup
+		characterMotor.grounded = true;
+		
 		// starting the game
 		currentScene = "Courtyard";
 		ResetGame ();
