@@ -2005,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04ca899870b04c5480d130bc7d34b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  is_VR: 1
+  is_VR: 0
   _regularController: {fileID: 1557962951}
   _vrController: {fileID: 424220466}
   creakingDoorAudioSource: {fileID: 834410748}
@@ -3052,7 +3052,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: is_VR
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a6b5fef9fcf924b79837c721b47a832f, type: 2}
       propertyPath: m_TagString
