@@ -8291,7 +8291,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1570597019}
-  - 111: {fileID: 1570597020}
   m_Layer: 0
   m_Name: hallway
   m_TagString: Untagged
@@ -8332,24 +8331,6 @@ Transform:
   - {fileID: 1211346826}
   - {fileID: 572640944}
   m_Father: {fileID: 0}
---- !u!111 &1570597020
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100000, guid: e2859f62f550b424aab10771fad4eaf9,
-    type: 3}
-  m_PrefabInternal: {fileID: 1333593567}
-  m_GameObject: {fileID: 1570597018}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
-  m_UserAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &1588949422
 GameObject:
   m_ObjectHideFlags: 0
