@@ -24,18 +24,14 @@ public class Player : MonoBehaviour
 	// scene holders
 	private string previousScene;
 	private string currentScene;
-
 	[SerializeField]
 	private bool is_VR = false ;
 	[SerializeField]
 	private GameObject _regularController ;
 	[SerializeField]
 	private GameObject _vrController ;
-	
 	[SerializeField]
 	private AudioSource creakingDoorAudioSource;
-
-
 	[SerializeField]
 	private Transform _vrTransform ;
 
@@ -49,6 +45,8 @@ public class Player : MonoBehaviour
 	private UISprite fullScreenFadeSprite;
 	[SerializeField]
 	private MessageBoxController messageController;
+	[SerializeField]
+	private MessageBoxController vrMessageController;
 	
 	// booleans
 	private bool fadingOutScreen;
@@ -60,7 +58,6 @@ public class Player : MonoBehaviour
 	private UISprite interactionSprite;
 	[SerializeField]
 	private UISprite vrInteractionSprite ;
-
 	[SerializeField]
 	private UILabel interactionLabel;
 	[SerializeField]
@@ -113,11 +110,11 @@ public class Player : MonoBehaviour
 		instance = this;
 		DontDestroyOnLoad (this);
 
-		_vrController.SetActive( is_VR ) ;
-		_regularController.SetActive( !is_VR ) ;
-		playerTransform = is_VR ? _vrTransform : playerTransform ;
-		interactionLabel = is_VR ? vrInteractionLabel : interactionLabel ;
-		interactionSprite = is_VR ? vrInteractionSprite : interactionSprite ;
+		_vrController.SetActive (is_VR);
+		_regularController.SetActive (!is_VR);
+		playerTransform = is_VR ? _vrTransform : playerTransform;
+		interactionLabel = is_VR ? vrInteractionLabel : interactionLabel;
+		interactionSprite = is_VR ? vrInteractionSprite : interactionSprite;
 
 
 		// get the raycast position
@@ -132,7 +129,7 @@ public class Player : MonoBehaviour
 	private void Update ()
 	{
 		interactionRay = Camera.main.ViewportPointToRay (rayCastPosition);
-		Debug.DrawRay( interactionRay.origin, interactionRay.direction );
+		Debug.DrawRay (interactionRay.origin, interactionRay.direction);
 		
 		
 		// see if the object the user touched is from the touchable object layer
@@ -278,7 +275,7 @@ public class Player : MonoBehaviour
 		}
 		
 		if (creakingDoorAudioSource != null) {
-			creakingDoorAudioSource.Play();
+			creakingDoorAudioSource.Play ();
 		}
 			
 		// set the color
@@ -315,15 +312,21 @@ public class Player : MonoBehaviour
 			return;
 		}
 		playingMessage = true;
-		messageController.Show ();
+		if (!is_VR) {
+			messageController.Show ();
+		}
 		StartCoroutine (AnimateMessage (message));
 	}
 	
 	private IEnumerator AnimateMessage (string message)
 	{
-		yield return StartCoroutine (messageController.PlayText (message));
-		yield return new WaitForSeconds (2.0F);
-		yield return StartCoroutine (messageController.AnimateHide ());
+		if (is_VR) {
+			yield return new WaitForSeconds (2.0F);
+		} else {
+			yield return StartCoroutine (messageController.PlayText (message));
+			yield return new WaitForSeconds (2.0F);
+			yield return StartCoroutine (messageController.AnimateHide ());
+		}
 		playingMessage = false;
 	}
 	
