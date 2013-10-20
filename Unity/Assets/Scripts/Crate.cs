@@ -15,8 +15,9 @@ public class Crate : MonoBehaviour {
 		
 		StopAllCoroutines();
 		
-		if (!canBePushedByPlayer ||
-				collision.gameObject.tag != "Player") {
+		string otherTag = collision.gameObject.tag;
+		if (!(canBePushedByPlayer && otherTag == "Player") &&
+				!(canBePushedBySteam && otherTag == "Steam")) {
 			return;
 		}
 		
@@ -35,33 +36,6 @@ public class Crate : MonoBehaviour {
 		} else {
 			deltaX = 0f;
 			deltaZ = (relativePositionZ > 0 ? moveDistance : -moveDistance);
-		}
-		StartCoroutine(Move(new Vector3(deltaX, 0f, deltaZ)));
-	}
-	
-	void OnParticleCollisionEnter(GameObject otherGameObject) {
-		
-		if (!canBePushedBySteam || otherGameObject.tag != "Steam") {
-			return;
-		}
-		
-		Steam steam = otherGameObject.GetComponent<Steam>();
-		if (steam == null) {
-			return;
-		}
-		
-		float deltaX;
-		float deltaZ;
-		if (steam.IsHorizontal) {
-			bool isRight = (transform.position.x -
-					otherGameObject.transform.position.x > 0);
-			deltaX = (isRight ? moveDistance : -moveDistance);
-			deltaZ = 0f;
-		} else {
-			bool isFarther = (transform.position.z -
-					otherGameObject.transform.position.z > 0);
-			deltaX = 0f;
-			deltaZ = (isFarther ? moveDistance : -moveDistance);
 		}
 		StartCoroutine(Move(new Vector3(deltaX, 0f, deltaZ)));
 	}

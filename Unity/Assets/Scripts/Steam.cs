@@ -1,22 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof(Collider))]
+[RequireComponent (typeof(ParticleSystem))]
 public class Steam : MonoBehaviour {
 	
-	public readonly bool IsHorizontal = false;
+	[SerializeField] float toggleColliderDelay = 0.5f;
+	
+	void Awake() {
+		particleSystem.enableEmission = collider.enabled = false;
+	}
 	
 	public void Toggle() {
-		
-		ParticleSystem particleSystem_ = particleSystem;
-		
-		if (particleSystem_ == null) {
-			return;
-		}
-
-		if (particleSystem_.isPlaying) {
-			particleSystem_.Stop();
-		} else {
-			particleSystem_.Play();
-		}
+		particleSystem.enableEmission = !particleSystem.enableEmission;
+		StartCoroutine(ToggleCollider());
+	}
+	
+	IEnumerator ToggleCollider() {
+		yield return new WaitForSeconds(toggleColliderDelay);
+		collider.enabled = !collider.enabled;
 	}
 }
