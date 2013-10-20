@@ -104,6 +104,31 @@ ModelImporter:
     100196: tableleg3
     100198: tableleg4
     100200: tabletop
+    100202: candle1:Gear_8
+    100204: candle1:polySurface2
+    100206: candle1:polySurface4
+    100208: candle1:polySurface6
+    100210: candle1:polySurface7
+    100212: candle1:polySurface8
+    100214: candle1:polySurface9
+    100216: Gear_8
+    100218: Gear_8 1
+    100220: group1
+    100222: group2
+    100224: group3
+    100226: group4
+    100228: polySurface2
+    100230: polySurface2 1
+    100232: polySurface4
+    100234: polySurface4 1
+    100236: polySurface6
+    100238: polySurface6 1
+    100240: polySurface7
+    100242: polySurface7 1
+    100244: polySurface8
+    100246: polySurface8 1
+    100248: polySurface9
+    100250: polySurface9 1
     400000: dining_floor
     400002: dining_wall
     400004: //RootNode
@@ -205,6 +230,31 @@ ModelImporter:
     400196: tableleg3
     400198: tableleg4
     400200: tabletop
+    400202: candle1:Gear_8
+    400204: candle1:polySurface2
+    400206: candle1:polySurface4
+    400208: candle1:polySurface6
+    400210: candle1:polySurface7
+    400212: candle1:polySurface8
+    400214: candle1:polySurface9
+    400216: Gear_8
+    400218: Gear_8 1
+    400220: group1
+    400222: group2
+    400224: group3
+    400226: group4
+    400228: polySurface2
+    400230: polySurface2 1
+    400232: polySurface4
+    400234: polySurface4 1
+    400236: polySurface6
+    400238: polySurface6 1
+    400240: polySurface7
+    400242: polySurface7 1
+    400244: polySurface8
+    400246: polySurface8 1
+    400248: polySurface9
+    400250: polySurface9 1
     2300000: polySurface105
     2300002: polySurface108
     2300004: polySurface109
@@ -292,6 +342,27 @@ ModelImporter:
     2300168: tableleg3
     2300170: tableleg4
     2300172: tabletop
+    2300174: candle1:Gear_8
+    2300176: candle1:polySurface2
+    2300178: candle1:polySurface4
+    2300180: candle1:polySurface6
+    2300182: candle1:polySurface7
+    2300184: candle1:polySurface8
+    2300186: candle1:polySurface9
+    2300188: Gear_8
+    2300190: Gear_8 1
+    2300192: polySurface2
+    2300194: polySurface2 1
+    2300196: polySurface4
+    2300198: polySurface4 1
+    2300200: polySurface6
+    2300202: polySurface6 1
+    2300204: polySurface7
+    2300206: polySurface7 1
+    2300208: polySurface8
+    2300210: polySurface8 1
+    2300212: polySurface9
+    2300214: polySurface9 1
     3300000: polySurface105
     3300002: polySurface108
     3300004: polySurface109
@@ -379,6 +450,27 @@ ModelImporter:
     3300168: tableleg3
     3300170: tableleg4
     3300172: tabletop
+    3300174: candle1:Gear_8
+    3300176: candle1:polySurface2
+    3300178: candle1:polySurface4
+    3300180: candle1:polySurface6
+    3300182: candle1:polySurface7
+    3300184: candle1:polySurface8
+    3300186: candle1:polySurface9
+    3300188: Gear_8
+    3300190: Gear_8 1
+    3300192: polySurface2
+    3300194: polySurface2 1
+    3300196: polySurface4
+    3300198: polySurface4 1
+    3300200: polySurface6
+    3300202: polySurface6 1
+    3300204: polySurface7
+    3300206: polySurface7 1
+    3300208: polySurface8
+    3300210: polySurface8 1
+    3300212: polySurface9
+    3300214: polySurface9 1
     4300000: polySurface108
     4300002: polySurface109
     4300004: polySurface105
@@ -466,6 +558,27 @@ ModelImporter:
     4300168: pCylinder6
     4300170: pCylinder7
     4300172: pCylinder8
+    4300174: candle1:polySurface4
+    4300176: candle1:polySurface2
+    4300178: candle1:polySurface6
+    4300180: candle1:Gear_8
+    4300182: candle1:polySurface7
+    4300184: candle1:polySurface8
+    4300186: candle1:polySurface9
+    4300188: polySurface4
+    4300190: polySurface2
+    4300192: polySurface6
+    4300194: Gear_8
+    4300196: polySurface7
+    4300198: polySurface8
+    4300200: polySurface9
+    4300202: polySurface4
+    4300204: polySurface2
+    4300206: polySurface6
+    4300208: Gear_8
+    4300210: polySurface7
+    4300212: polySurface8
+    4300214: polySurface9
     9500000: //RootNode
     11100000: //RootNode
   materials:

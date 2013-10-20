@@ -15,9 +15,8 @@ public class Key : InteractableObject
 	private Transform lightTransform;
 	
 	// animation variables
-	private bool hoveringUp;
-	private float translationTimer;
 	private Vector3 translationModifier;
+	private bool allowSpin;
 	
 	// interaction handling
 	private bool isInteracted = false;
@@ -32,25 +31,14 @@ public class Key : InteractableObject
 		if (Player.Instance.CheckKey (keyName)) {
 			Destroy (gameObject);
 		}
+		allowSpin = true;
 	}
 	
 	private void Update ()
 	{
-//		if (hoveringUp) {
-//			translationTimer += Time.deltaTime;
-//			if (translationTimer > 1.0F) {
-//				hoveringUp = false;
-//			}
-//		} else {
-//			translationTimer -= Time.deltaTime;
-//			if (translationTimer < 0.0F) {
-//				hoveringUp = true;
-//			}
-//		}
-//		translationModifier
-//		keyTransform.position = new Vector3 (keyTransform.position.x, keyTransform.position.y + (translationTimer / 2), keyTransform.position.z);
-//		lightTransform.localScale = new Vector3 (lightTransform.localScale.x + (translationTimer / 4), lightTransform.localScale.y, 
-//			lightTransform.localScale.x + (translationTimer / 4));
+		if (allowSpin) {
+			keyTransform.localEulerAngles += Vector3.up * Time.deltaTime * 10;
+		}
 	}
 	
 	#endregion
@@ -71,6 +59,7 @@ public class Key : InteractableObject
 	private IEnumerator MoveTowardsPlayer ()
 	{
 		// restrict movement
+		allowSpin = false;
 		Player.Instance.EnableMovement (false);
 		
 		Vector3 startPosition = keyTransform.position;

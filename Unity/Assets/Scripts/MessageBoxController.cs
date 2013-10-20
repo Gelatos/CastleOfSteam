@@ -63,7 +63,7 @@ public class MessageBoxController : MonoBehaviour
 	protected virtual void Start ()
 	{
 		// move the textbox off screen
-		textLabel.lineWidth = (int)(Screen.width * 0.85f);
+//		textLabel.lineWidth = (int)(Screen.width * 0.85f);
 		transform.localPosition = Vector3.left * spriteBackground.localScale.x;
 	}
 	

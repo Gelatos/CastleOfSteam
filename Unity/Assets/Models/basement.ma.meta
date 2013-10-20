@@ -30,6 +30,11 @@ ModelImporter:
     100048: ramps_collidethese_
     100050: stairs1
     100052: stairs2
+    100054: Gear_1:Gear_1
+    100056: Gear_2
+    100058: Gear_3
+    100060: Gear_5:Gear_5
+    100062: Gear_9
     400000: //RootNode
     400002: Do_not_Collide
     400004: hallway2_floor
@@ -57,6 +62,11 @@ ModelImporter:
     400048: ramps_collidethese_
     400050: stairs1
     400052: stairs2
+    400054: Gear_1:Gear_1
+    400056: Gear_2
+    400058: Gear_3
+    400060: Gear_5:Gear_5
+    400062: Gear_9
     2300000: hallway2_floor
     2300002: hallway2_wall
     2300004: polySurface34
@@ -79,6 +89,11 @@ ModelImporter:
     2300038: polySurface83
     2300040: ramp3
     2300042: ramp4
+    2300044: Gear_1:Gear_1
+    2300046: Gear_2
+    2300048: Gear_3
+    2300050: Gear_5:Gear_5
+    2300052: Gear_9
     3300000: hallway2_floor
     3300002: hallway2_wall
     3300004: polySurface34
@@ -101,6 +116,11 @@ ModelImporter:
     3300038: polySurface83
     3300040: ramp3
     3300042: ramp4
+    3300044: Gear_1:Gear_1
+    3300046: Gear_2
+    3300048: Gear_3
+    3300050: Gear_5:Gear_5
+    3300052: Gear_9
     4300000: hallway2_floor
     4300002: hallway2_wall
     4300004: polySurface75
@@ -123,6 +143,11 @@ ModelImporter:
     4300038: polySurface42
     4300040: ramp3
     4300042: ramp4
+    4300044: Gear_1:Gear_1
+    4300046: Gear_2
+    4300048: Gear_3
+    4300050: Gear_5:Gear_5
+    4300052: Gear_9
     9500000: //RootNode
     11100000: //RootNode
   materials:

@@ -1,30 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BoilingWater : MonoBehaviour {
+public class BoilingWater : MonoBehaviour
+{
 	
-	[SerializeField] AudioSource boilingToDeathAudioSource;
-	
+	[SerializeField]
+	AudioSource boilingToDeathAudioSource;
 	bool isBoilingToDeath = false;
 	
-	void OnCollisionEnter(Collision collision) {
-		if (collision.gameObject.tag == "Player") {
+	void OnTriggerEnter (Collider other)
+	{
+		if (other.gameObject.tag == "Player") {
 			if (!isBoilingToDeath) {
 				isBoilingToDeath = true;
-				StartCoroutine(BoilToDeath());
+				StartCoroutine (BoilToDeath ());
 			}
 		}
 	}
 	
-	IEnumerator BoilToDeath() {
+	IEnumerator BoilToDeath ()
+	{
 		
 		if (boilingToDeathAudioSource != null) {
-			boilingToDeathAudioSource.Play();
+			boilingToDeathAudioSource.Play ();
 			while (boilingToDeathAudioSource.isPlaying) {
 				yield return null;
 			}
 		}
 		
-		Player.Instance.ResetLevel();
+		Player.Instance.Death ();
 	}
 }

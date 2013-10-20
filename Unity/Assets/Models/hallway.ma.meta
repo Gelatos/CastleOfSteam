@@ -37,6 +37,68 @@ ModelImporter:
     100062: ramp2
     100064: ramps_collidethese_
     100066: stairs4
+    100068: candle
+    100070: candle1
+    100072: candle2
+    100074: pillar:Pillar
+    100076: pillar:pipe
+    100078: pillar:pipe1
+    100080: pillar:pipe2
+    100082: pillar:pipe3
+    100084: pillar:polySurface2
+    100086: pillar:polySurface8
+    100088: pillar:transform10
+    100090: pillar:transform5
+    100092: pillar:transform6
+    100094: pillar:transform7
+    100096: pillar:transform8
+    100098: pillar:transform9
+    100100: Pillar_1:Pillar
+    100102: Pillar_1:pipe
+    100104: Pillar_1:pipe1
+    100106: Pillar_1:pipe2
+    100108: Pillar_1:pipe3
+    100110: Pillar_1:polySurface2
+    100112: Pillar_1:polySurface8
+    100114: Pillar_1:transform10
+    100116: Pillar_1:transform5
+    100118: Pillar_1:transform6
+    100120: Pillar_1:transform7
+    100122: Pillar_1:transform8
+    100124: Pillar_1:transform9
+    100126: Pillar_2:Gears
+    100128: Pillar_2:Gears1
+    100130: Pillar_2:Gears2
+    100132: Pillar_2:Gears3
+    100134: Pillar_2:Pillar
+    100136: Pillar_2:pipe
+    100138: Pillar_2:pipe1
+    100140: Pillar_2:pipe2
+    100142: Pillar_2:pipe3
+    100144: Pillar_2:polySurface2
+    100146: Pillar_2:polySurface8
+    100148: Pillar_2:transform1
+    100150: Pillar_2:transform10
+    100152: Pillar_2:transform2
+    100154: Pillar_2:transform3
+    100156: Pillar_2:transform4
+    100158: Pillar_2:transform5
+    100160: Pillar_2:transform6
+    100162: Pillar_2:transform7
+    100164: Pillar_2:transform8
+    100166: Pillar_2:transform9
+    100168: polySurface108
+    100170: polySurface54
+    100172: Shield_4:Shield3
+    100174: Shield_6:Shield5
+    100176: Spazz:polySurface54
+    100178: wallcandle:candle
+    100180: wallcandle:candleholder
+    100182: wallcandle:group1
+    100184: wallcandle:wallholder
+    100186: wallholder
+    100188: wallholder1
+    100190: wallholder2
     400000: blocks
     400002: Do_not_Collide
     400004: //RootNode
@@ -71,6 +133,68 @@ ModelImporter:
     400062: ramp2
     400064: ramps_collidethese_
     400066: stairs4
+    400068: candle
+    400070: candle1
+    400072: candle2
+    400074: pillar:Pillar
+    400076: pillar:pipe
+    400078: pillar:pipe1
+    400080: pillar:pipe2
+    400082: pillar:pipe3
+    400084: pillar:polySurface2
+    400086: pillar:polySurface8
+    400088: pillar:transform10
+    400090: pillar:transform5
+    400092: pillar:transform6
+    400094: pillar:transform7
+    400096: pillar:transform8
+    400098: pillar:transform9
+    400100: Pillar_1:Pillar
+    400102: Pillar_1:pipe
+    400104: Pillar_1:pipe1
+    400106: Pillar_1:pipe2
+    400108: Pillar_1:pipe3
+    400110: Pillar_1:polySurface2
+    400112: Pillar_1:polySurface8
+    400114: Pillar_1:transform10
+    400116: Pillar_1:transform5
+    400118: Pillar_1:transform6
+    400120: Pillar_1:transform7
+    400122: Pillar_1:transform8
+    400124: Pillar_1:transform9
+    400126: Pillar_2:Gears
+    400128: Pillar_2:Gears1
+    400130: Pillar_2:Gears2
+    400132: Pillar_2:Gears3
+    400134: Pillar_2:Pillar
+    400136: Pillar_2:pipe
+    400138: Pillar_2:pipe1
+    400140: Pillar_2:pipe2
+    400142: Pillar_2:pipe3
+    400144: Pillar_2:polySurface2
+    400146: Pillar_2:polySurface8
+    400148: Pillar_2:transform1
+    400150: Pillar_2:transform10
+    400152: Pillar_2:transform2
+    400154: Pillar_2:transform3
+    400156: Pillar_2:transform4
+    400158: Pillar_2:transform5
+    400160: Pillar_2:transform6
+    400162: Pillar_2:transform7
+    400164: Pillar_2:transform8
+    400166: Pillar_2:transform9
+    400168: polySurface108
+    400170: polySurface54
+    400172: Shield_4:Shield3
+    400174: Shield_6:Shield5
+    400176: Spazz:polySurface54
+    400178: wallcandle:candle
+    400180: wallcandle:candleholder
+    400182: wallcandle:group1
+    400184: wallcandle:wallholder
+    400186: wallholder
+    400188: wallholder1
+    400190: wallholder2
     2300000: hallway1_floor 1
     2300002: hallway1_stairside
     2300004: hallway1_wall1
@@ -99,6 +223,19 @@ ModelImporter:
     2300050: polySurface33
     2300052: ramp
     2300054: ramp2
+    2300056: candle
+    2300058: candle1
+    2300060: candle2
+    2300062: polySurface108
+    2300064: polySurface54
+    2300066: Shield_4:Shield3
+    2300068: Shield_6:Shield5
+    2300070: Spazz:polySurface54
+    2300072: wallcandle:candle
+    2300074: wallcandle:wallholder
+    2300076: wallholder
+    2300078: wallholder1
+    2300080: wallholder2
     3300000: hallway1_floor 1
     3300002: hallway1_stairside
     3300004: hallway1_wall1
@@ -127,6 +264,19 @@ ModelImporter:
     3300050: polySurface33
     3300052: ramp
     3300054: ramp2
+    3300056: candle
+    3300058: candle1
+    3300060: candle2
+    3300062: polySurface108
+    3300064: polySurface54
+    3300066: Shield_4:Shield3
+    3300068: Shield_6:Shield5
+    3300070: Spazz:polySurface54
+    3300072: wallcandle:candle
+    3300074: wallcandle:wallholder
+    3300076: wallholder
+    3300078: wallholder1
+    3300080: wallholder2
     4300000: hallway1_wall1
     4300002: hallway1_stairside
     4300004: ramp
@@ -155,6 +305,19 @@ ModelImporter:
     4300050: hallway1_floor
     4300052: polySurface107
     4300054: ramp2
+    4300056: wallcandle:wallholder
+    4300058: wallcandle:candle
+    4300060: candle
+    4300062: wallholder
+    4300064: wallholder1
+    4300066: candle1
+    4300068: wallholder2
+    4300070: candle2
+    4300072: Spazz:polySurface54
+    4300074: polySurface54
+    4300076: polySurface108
+    4300078: Shield_6:Shield5
+    4300080: Shield_4:Shield3
     9500000: //RootNode
     11100000: //RootNode
   materials:

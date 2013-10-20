@@ -36,7 +36,8 @@ public class Player : MonoBehaviour
 	private MessageBoxController messageController;
 	
 	// booleans
-	private bool fadingScreen;
+	private bool fadingOutScreen;
+	private bool fadingInScreen;
 	private bool playingMessage;
 	
 	// interaction
@@ -96,9 +97,6 @@ public class Player : MonoBehaviour
 		// get the raycast position
 		rayCastPosition = new Vector3 (Camera.main.pixelWidth / 2, Camera.main.pixelHeight / 2, 0);
 		
-		// character motor setup
-		characterMotor.grounded = true;
-		
 		// starting the game
 		currentScene = "Courtyard";
 		ResetGame ();
@@ -132,6 +130,7 @@ public class Player : MonoBehaviour
 		} else {
 			playerTransform.position = Room.Instance.DefaultPosition.position;
 		}
+		StartCoroutine (FadeInScreen (Color.black, 1.0F));
 	}
 	
 	#endregion
@@ -140,8 +139,8 @@ public class Player : MonoBehaviour
 	
 	public void ResetLevel ()
 	{
-		StartCoroutine (FadeOutScreen (Color.black, 1.0F));
-		Application.LoadLevel (currentScene);
+		StartCoroutine (FadeOutScreen (Color.black, 0.1F));
+		StartCoroutine (WaitForFadeThenLoad (currentScene));
 	}
 	
 	public void LoadLevel (string sceneName)
@@ -151,8 +150,7 @@ public class Player : MonoBehaviour
 		currentScene = sceneName;
 		
 		// load the new level
-		StartCoroutine (FadeOutScreen (Color.black, 1.0F));
-		Application.LoadLevel (currentScene);
+		StartCoroutine (WaitForFadeThenLoad (currentScene));
 	}
 	
 	public void LoadLevel (string sceneName, string keyName)
@@ -162,6 +160,12 @@ public class Player : MonoBehaviour
 		} else {
 			PlayMessage ("You do not have a key for this room");
 		}
+	}
+	
+	private IEnumerator WaitForFadeThenLoad (string sceneName)
+	{
+		yield return StartCoroutine (FadeOutScreen (Color.black, 0.1F));
+		Application.LoadLevel (sceneName);
 	}
 	
 	#endregion
@@ -194,7 +198,10 @@ public class Player : MonoBehaviour
 	private IEnumerator FadeInScreen (Color color, float speed = 1.0F)
 	{
 		// prevent auto fade out when fading in the screen
-		while (fadingScreen) {
+		if (fadingInScreen) {
+			yield break;
+		}
+		while (fadingOutScreen) {
 			yield return null;
 		}
 		
@@ -206,10 +213,13 @@ public class Player : MonoBehaviour
 	private IEnumerator FadeInScreen (float speed = 1.0F)
 	{
 		// prevent auto fade out when fading in the screen
-		while (fadingScreen) {
+		if (fadingInScreen) {
+			yield break;
+		}
+		while (fadingOutScreen) {
 			yield return null;
 		}
-		fadingScreen = true;
+		fadingInScreen = true;
 		
 		// fade in the sprite
 		float timer = 0.0F;
@@ -218,28 +228,28 @@ public class Player : MonoBehaviour
 			fullScreenFadeSprite.alpha = 1.0F - timer;
 			yield return null;
 		}
-		fadingScreen = false;
+		fadingInScreen = false;
 	}
 	
 	private IEnumerator FadeOutScreen (Color color, float speed = 1.0F)
 	{
 		// prevent auto fade out when fading in the screen
-		while (fadingScreen) {
-			yield return null;
+		if (fadingOutScreen) {
+			yield break;
 		}
 		
 		// set the color
 		fullScreenFadeSprite.color = color;
-		yield return StartCoroutine (FadeInScreen (speed));
+		yield return StartCoroutine (FadeOutScreen (speed));
 	}
 	
 	private IEnumerator FadeOutScreen (float speed = 1.0F)
 	{
 		// prevent auto fade out when fading in the screen
-		while (fadingScreen) {
-			yield return null;
+		if (fadingOutScreen) {
+			yield break;
 		}
-		fadingScreen = true;
+		fadingOutScreen = true;
 		
 		// fade out the sprite
 		float timer = 0.0F;
@@ -248,7 +258,8 @@ public class Player : MonoBehaviour
 			fullScreenFadeSprite.alpha = timer;
 			yield return null;
 		}
-		fadingScreen = false;
+		fullScreenFadeSprite.alpha = 1.0F;
+		fadingOutScreen = false;
 	}
 	
 	#endregion
@@ -302,6 +313,24 @@ public class Player : MonoBehaviour
 	public void EnableMovement (bool enable)
 	{
 		characterMotor.canControl = enable;
+	}
+	
+	#endregion
+	
+	#region Death Handling
+	
+	public void Death ()
+	{
+		StartCoroutine (DeathAnimation ());
+	}
+	
+	private IEnumerator DeathAnimation ()
+	{
+		yield return StartCoroutine (FadeOutScreen (Color.black, 0.5F));
+		playingMessage = true;
+		messageController.Show ();
+		yield return StartCoroutine (AnimateMessage ("You Died"));
+		Application.LoadLevel (currentScene);
 	}
 	
 	#endregion
