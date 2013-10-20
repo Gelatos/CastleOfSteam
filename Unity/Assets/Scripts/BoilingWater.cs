@@ -20,6 +20,9 @@ public class BoilingWater : MonoBehaviour
 	
 	IEnumerator BoilToDeath ()
 	{
+		RenderSettings.fog = true;
+    	RenderSettings.fogColor = new Color(0f, 0.4f, 0.7f, 0.6f);
+    	RenderSettings.fogDensity = 0.04f;
 		
 		if (boilingToDeathAudioSource != null) {
 			boilingToDeathAudioSource.Play ();
