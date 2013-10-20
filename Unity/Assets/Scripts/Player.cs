@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
 	private GameObject _regularCamera ;
 	[SerializeField]
 	private GameObject _vrCamera ;
+	
+	[SerializeField]
+	private AudioSource creakingDoorAudioSource;
 
 	// Transforms
 	[SerializeField]
@@ -258,6 +261,10 @@ public class Player : MonoBehaviour
 			yield break;
 		}
 		
+		if (creakingDoorAudioSource != null) {
+			creakingDoorAudioSource.Play();
+		}
+			
 		// set the color
 		fullScreenFadeSprite.color = color;
 		yield return StartCoroutine (FadeOutScreen (speed));
