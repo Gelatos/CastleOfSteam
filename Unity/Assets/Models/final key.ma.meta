@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bdfc267e0b3624b8889b1b23daee2c29
+guid: d8bf359d7b66b4eb08758d0a13818ca2
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -16,7 +16,6 @@ ModelImporter:
     4300000: KeyStem
     4300002: pCube1
     9500000: //RootNode
-    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -67,5 +66,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   additionalBone: 1
-  animationType: 1
+  animationType: 2
   userData: 
